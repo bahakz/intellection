@@ -1,9 +1,12 @@
 Intellection::Application.routes.draw do
+  get "users/new"
   root  'static_pages#home'
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/courses',   to: 'static_pages#courses',   via: 'get'
   match '/about', to: 'static_pages#about', via: 'get'
   match '/contacts', to: 'static_pages#contacts', via: 'get'
+  
+  match '/signup',  to: 'users#new',            via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
