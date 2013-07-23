@@ -11,22 +11,10 @@
     <![endif]-->
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <%= link_to "Intellection", '#', id: "logo" %>
-          <nav>
-            <ul class="nav pull-right">
-              <li><%= link_to "Главная",    '#' %></li>
-              <li><%= link_to "О нас",    '#' %></li>
-              <li><%= link_to "Курсы", '#' %></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
+     <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
