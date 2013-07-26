@@ -1,0 +1,11 @@
+<div class="container">
+    <% if @user.courses.any? %>
+      <h3>Microposts (<%= @user.courses.count %>)</h3>
+      <ol class="courses">
+        <%= render @courses %>
+      </ol>
+    <% else %> 
+      <h3> Еще ни одного курса </h3>
+    <% end %>
+    <li> <%= link_to 'Добавить Курс', new_course_path %> </li>
+</div>

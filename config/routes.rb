@@ -1,6 +1,9 @@
 Intellection::Application.routes.draw do
+
+  resources :courses
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+
   root  'static_pages#home'
   match '/home',    to: 'static_pages#home',    via: 'get'
   match '/courses',   to: 'static_pages#courses',   via: 'get'
